@@ -1,0 +1,18 @@
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+
+  .books-container {
+    margin: 16px 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 4px;
+
+    .book-button {
+      cursor: pointer;
+    }
+  }
+}

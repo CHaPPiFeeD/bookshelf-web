@@ -1,0 +1,12 @@
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 138px;
+
+  .home-button {
+    font-size: 20px;
+  }
+}

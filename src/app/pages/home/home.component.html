@@ -1,0 +1,7 @@
+<div class="main-container">
+  <div class="books-container">
+    <div *ngFor="let book of books" [routerLink]="['/books', book.id]" class="book-button">
+      <app-book-card [book]="book" />
+    </div>
+  </div>
+</div>

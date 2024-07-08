@@ -17,6 +17,10 @@ function initializeKeycloak(keycloak: KeycloakService) {
         token: localStorage.getItem('token') as any,
         refreshToken: localStorage.getItem('refreshToken') as any,
       },
+    }).then((authenticated) => {
+      console.log('Keycloak authenticated:', authenticated);
+    }).catch((error) => {
+      console.error('Keycloak initialization error:', error);
     });
 }
 

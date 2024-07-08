@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { KeycloakService } from 'keycloak-angular';
+// import { KeycloakService } from 'keycloak-angular';
 
 
 @Injectable({
@@ -7,14 +7,14 @@ import { KeycloakService } from 'keycloak-angular';
 })
 export class AuthService {
   constructor(
-    private readonly keycloakService: KeycloakService
+    // private readonly keycloakService: KeycloakService
   ) {}
 
-  public get isAuth(): boolean {
+  public isAuth(): any  {
     console.log('auth 1');
-    
-    const data = this.keycloakService.getKeycloakInstance().authenticated || false;
+
+    // const data = this.keycloakService.getKeycloakInstance().authenticated || false;
     console.log('auth 2');
-    return data;
+    // return data;
   }
 }

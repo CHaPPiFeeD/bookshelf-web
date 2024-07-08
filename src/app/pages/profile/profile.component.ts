@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { KeycloakService } from 'keycloak-angular';
+// import { KeycloakService } from 'keycloak-angular';
 import { AuthService } from '../../services/auth.service';
 
 
@@ -9,15 +9,15 @@ import { AuthService } from '../../services/auth.service';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
-  private isAuth: boolean;
+  // private isAuth: boolean;
 
   constructor(
     private authService: AuthService,
-    protected keycloakService: KeycloakService,
+    // protected keycloakService: KeycloakService,
   ) {
-    this.isAuth = this.authService.isAuth;
-    if (!this.isAuth) {
-      keycloakService.login();
-    }
+    // this.isAuth = this.authService.isAuth;
+    // if (!this.isAuth) {
+    //   // keycloakService.login();
+    // }
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookApiService } from '../../api/book.api.service';
-import { KeycloakService } from 'keycloak-angular';
+// import { KeycloakService } from 'keycloak-angular';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private bookApiService: BookApiService,
-    protected keycloakService: KeycloakService,
+    // protected keycloakService: KeycloakService,
   ) { }
 
   async ngOnInit(): Promise<void> {
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
         if (!res.status) throw new Error('Request error.');
         this.books = res.data;
         console.log(this.books);
-        
+
       },
       error: (err) => {
         console.error(err);

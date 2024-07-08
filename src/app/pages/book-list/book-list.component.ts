@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { BookApiService } from "../../api/book.api.service";
-import { KeycloakService } from "keycloak-angular";
+// import { KeycloakService } from "keycloak-angular";
 
 
 @Component({
@@ -13,7 +13,7 @@ export class BookListComponent implements OnInit {
 
   constructor(
     private bookApiService: BookApiService,
-    protected keycloakService: KeycloakService,
+    // protected keycloakService: KeycloakService,
   ) { }
 
   async ngOnInit(): Promise<void> {

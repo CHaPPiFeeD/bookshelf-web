@@ -13,6 +13,8 @@ export function initializeKeycloak(keycloak: KeycloakService) {
         checkLoginIframe: false,
         token: localStorage.getItem('token') as any,
         refreshToken: localStorage.getItem('refreshToken') as any,
-      }
+        enableLogging: true,
+        redirectUri: 'http://localhost:4200',
+      },
     });
 }

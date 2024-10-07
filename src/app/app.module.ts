@@ -8,17 +8,18 @@ import { ProfilePageComponent } from "./components/profile-page/profile-page.com
 import { RouterModule } from '@angular/router';
 import { routes } from "./app.routes";
 import { AuthGuard } from "./guards/auth.guard";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { SharedModule } from "./modules/shared/shared.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
-    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     KeycloakAngularModule,
+    SharedModule,
   ],
   providers: [
     AuthGuard,
@@ -28,6 +29,7 @@ import { AuthGuard } from "./guards/auth.guard";
       multi: true,
       deps: [KeycloakService]
     },
+    provideAnimationsAsync(),
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent]

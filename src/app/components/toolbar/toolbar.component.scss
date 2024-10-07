@@ -1,0 +1,29 @@
+.toolbar {
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 24px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+
+    .logo,
+    .auth {
+      width: 200px;
+    }
+
+    .auth {
+      display: flex;
+      justify-content: end;
+    }
+
+    .nav {
+      width: auto;
+      margin: auto;
+    }
+  }
+}

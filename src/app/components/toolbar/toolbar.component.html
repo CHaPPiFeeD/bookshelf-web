@@ -5,7 +5,7 @@
     </div>
     <nav class="nav">
       <button mat-button [routerLink]="'/'"><mat-icon>home</mat-icon></button>
-      <button mat-button [routerLink]="'/profile'">
+      <button mat-button *ngIf="isLoggined" (click)="toProfile()">
         <mat-icon>person</mat-icon>
       </button>
     </nav>

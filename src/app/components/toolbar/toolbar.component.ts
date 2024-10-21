@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 import { KeycloakService } from "keycloak-angular";
 
 @Component({
@@ -9,8 +10,15 @@ import { KeycloakService } from "keycloak-angular";
 export class ToolbarComponent {
   isLoggined!: boolean;
 
-  constructor(private keycloakService: KeycloakService) {
+  constructor(
+    private keycloakService: KeycloakService,
+    private router: Router,
+  ) {
     this.isLoggined = this.keycloakService.isLoggedIn();
+  }
+
+  toProfile() {
+    this.router.navigate(['/profile', 'bdbd2297-e09f-41f3-affb-82d996eafb3e'])
   }
 
   login() {

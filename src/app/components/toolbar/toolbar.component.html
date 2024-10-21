@@ -1,0 +1,17 @@
+<mat-toolbar class="toolbar">
+  <div class="container">
+    <div class="logo">
+      BOOKSHELF
+    </div>
+    <nav class="nav">
+      <button mat-button [routerLink]="'/'"><mat-icon>home</mat-icon></button>
+      <button mat-button *ngIf="isLoggined" (click)="toProfile()">
+        <mat-icon>person</mat-icon>
+      </button>
+    </nav>
+    <div class="auth">
+      <button mat-button *ngIf="!isLoggined" (click)="login()"><mat-icon>login</mat-icon></button>
+      <button mat-button *ngIf="isLoggined" (click)="logout()"><mat-icon>logout</mat-icon></button>
+    </div>
+  </div>
+</mat-toolbar>

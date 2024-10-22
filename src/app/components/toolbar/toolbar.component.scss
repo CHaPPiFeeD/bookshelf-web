@@ -10,6 +10,10 @@
     width: 100%;
     margin: auto;
 
+    .logo {
+      cursor: pointer;
+    }
+
     .logo,
     .auth {
       width: 200px;

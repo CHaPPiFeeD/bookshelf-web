@@ -9,6 +9,15 @@ export class UserApiService {
 
   getUserProfile(id: string) {
     return this.http.get(`${environment.apiUrl}/api/user/${id}`)
-      .pipe(map((v: any) => { console.log('v', v); return v.data }));
+      .pipe(map((v: any) => v.data));
   }
+
+  getUsers(query: IGetUsersQuery) {
+    return this.http.get(`${environment.apiUrl}/api/user`, { params: query as any })
+      .pipe(map((v: any) => v.data));
+  }
+}
+
+interface IGetUsersQuery {
+  email: string;
 }
